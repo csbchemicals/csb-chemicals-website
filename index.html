@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSB Chemicals | Textile Chemicals & Dyes</title>
+<meta name="description" content="CSB Chemicals — Textile chemicals, dyes and industrial solutions.">
+<style>
+:root {
+  --navy:#07172c;
+  --blue:#0d6efd;
+  --cyan:#45e0dc;
+  --white:#f7fbff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Arial,sans-serif;
+  background:var(--navy);color:var(--white);
+  line-height:1.6
+}
+nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 7%;position:sticky;top:0;z-index:10;
+  background:#07172cf2;border-bottom:1px solid #ffffff18
+}
+.logo{font-size:23px;font-weight:800;color:var(--cyan)}
+nav a{color:white;text-decoration:none;margin-left:18px}
+.hero{
+  min-height:78vh;display:flex;align-items:center;
+  padding:80px 8%;
+  background:radial-gradient(ellipse at 85% 30%,#087d9a66,transparent 45%),
+  linear-gradient(135deg,#07172c,#0b2a4c);
+}
+.hero-content{max-width:750px;animation:rise 1s ease-out}
+.tag{color:var(--cyan);letter-spacing:3px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(40px,8vw,76px);line-height:1.06;margin:18px 0}
+h1 span{color:var(--cyan)}
+p{color:#bdcddd}
+.btn{
+  display:inline-block;padding:13px 22px;border-radius:8px;
+  background:var(--cyan);color:#06172a;font-weight:bold;
+  text-decoration:none;margin:10px 8px 0 0
+}
+.btn.secondary{background:transparent;color:white;border:1px solid #ffffff55}
+section{padding:75px 8%}
+.section-title{text-align:center;font-size:34px;margin:0 0 12px}
+.intro{text-align:center;max-width:650px;margin:0 auto 35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  padding:26px;border:1px solid #ffffff1b;border-radius:16px;
+  background:linear-gradient(145deg,#102946,#0b1e35);
+  transition:transform .25s,border-color .25s
+}
+.card:hover{transform:translateY(-7px);border-color:var(--cyan)}
+.symbol{font-size:30px}
+.card h3{margin-bottom:8px}
+.about{background:#0a2038}
+.contact{text-align:center;background:linear-gradient(120deg,#0b2d4b,#07465a)}
+footer{text-align:center;padding:25px;color:#9fb3c8;font-size:13px}
+.reveal{animation:rise .9s ease both}
+@keyframes rise{
+ from{opacity:0;transform:translateY(22px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:700px){
+ nav{padding:15px 5%;flex-wrap:wrap;gap:10px}
+ nav a{margin:0 10px 0 0;font-size:13px}
+ .grid{grid-template-columns:1fr}
+ section{padding:55px 6%}
+ .hero{padding:65px 6%;min-height:70vh}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">CSB CHEMICALS</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">TEXTILE CHEMICALS & DYES</div>
+    <h1>Better Chemistry.<br><span>Better Textiles.</span></h1>
+    <p>Solutions for the textile industry, focused on quality,
+    consistency and dependable business relationships.</p>
+    <a class="btn" href="#products">Explore Solutions ↗</a>
+    <a class="btn secondary" href="#contact">Contact Our Team</a>
+  </div>
+</header>
+
+<section id="products">
+  <h2 class="section-title">Our Solutions</h2>
+  <p class="intro">Explore our textile chemical and dye categories.
+  Contact our team to confirm product availability and specifications.</p>
+  <div class="grid">
+    <article class="card">
+      <div class="symbol">◈</div>
+      <h3>Textile Dyes</h3>
+      <p>Dye solutions for textile processing. Ask us about suitable
+      shades, applications and available grades.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">✧</div>
+      <h3>Textile Chemicals</h3>
+      <p>Chemical solutions for textile processing requirements,
+      subject to product availability and application.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">⬡</div>
+      <h3>Industrial Solutions</h3>
+      <p>Discuss your process requirements with our team to identify
+      suitable products and technical information.</p>
+    </article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="section-title">About CSB Chemicals</h2>
+  <p class="intro">Your business partner for textile chemicals and dyes.
+  We aim to build lasting customer relationships through responsive
+  service, product guidance and professional communication.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>Quality Focus</h3>
+      <p>Product information and specifications for informed selection.</p>
+    </article>
+    <article class="card">
+      <h3>Customer Support</h3>
+      <p>Helping customers discuss their textile processing needs.</p>
+    </article>
+    <article class="card">
+      <h3>Business Partnership</h3>
+      <p>Building long-term relationships with textile businesses.</p>
+    </article>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="tag">LET'S CONNECT</div>
+  <h2 class="section-title">Discuss Your Requirements</h2>
+  <p>Contact CSB Chemicals for product inquiries and business information.</p>
+  <p><strong>Sales Executive: Ali Raza</strong></p>
+  <a class="btn" href="mailto:YOUR-EMAIL@example.com?subject=CSB%20Chemicals%20Inquiry">
+    Email Our Team
+  </a>
+  <p style="font-size:13px">Replace the sample email with your actual business email.</p>
+</section>
+
+<footer>
+  © <span id="year"></span> CSB Chemicals · Textile Chemicals & Dyes
+</footer>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+  </html>
+    
