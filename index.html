@@ -2,166 +2,599 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSB Chemicals | Textile Chemicals & Dyes</title>
-<meta name="description" content="CSB Chemicals — Textile chemicals, dyes and industrial solutions.">
-<style>
-:root {
-  --navy:#07172c;
-  --blue:#0d6efd;
-  --cyan:#45e0dc;
-  --white:#f7fbff;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;font-family:Arial,sans-serif;
-  background:var(--navy);color:var(--white);
-  line-height:1.6
-}
-nav{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:18px 7%;position:sticky;top:0;z-index:10;
-  background:#07172cf2;border-bottom:1px solid #ffffff18
-}
-.logo{font-size:23px;font-weight:800;color:var(--cyan)}
-nav a{color:white;text-decoration:none;margin-left:18px}
-.hero{
-  min-height:78vh;display:flex;align-items:center;
-  padding:80px 8%;
-  background:radial-gradient(ellipse at 85% 30%,#087d9a66,transparent 45%),
-  linear-gradient(135deg,#07172c,#0b2a4c);
-}
-.hero-content{max-width:750px;animation:rise 1s ease-out}
-.tag{color:var(--cyan);letter-spacing:3px;font-size:12px;font-weight:bold}
-h1{font-size:clamp(40px,8vw,76px);line-height:1.06;margin:18px 0}
-h1 span{color:var(--cyan)}
-p{color:#bdcddd}
-.btn{
-  display:inline-block;padding:13px 22px;border-radius:8px;
-  background:var(--cyan);color:#06172a;font-weight:bold;
-  text-decoration:none;margin:10px 8px 0 0
-}
-.btn.secondary{background:transparent;color:white;border:1px solid #ffffff55}
-section{padding:75px 8%}
-.section-title{text-align:center;font-size:34px;margin:0 0 12px}
-.intro{text-align:center;max-width:650px;margin:0 auto 35px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{
-  padding:26px;border:1px solid #ffffff1b;border-radius:16px;
-  background:linear-gradient(145deg,#102946,#0b1e35);
-  transition:transform .25s,border-color .25s
-}
-.card:hover{transform:translateY(-7px);border-color:var(--cyan)}
-.symbol{font-size:30px}
-.card h3{margin-bottom:8px}
-.about{background:#0a2038}
-.contact{text-align:center;background:linear-gradient(120deg,#0b2d4b,#07465a)}
-footer{text-align:center;padding:25px;color:#9fb3c8;font-size:13px}
-.reveal{animation:rise .9s ease both}
-@keyframes rise{
- from{opacity:0;transform:translateY(22px)}
- to{opacity:1;transform:translateY(0)}
-}
-@media(max-width:700px){
- nav{padding:15px 5%;flex-wrap:wrap;gap:10px}
- nav a{margin:0 10px 0 0;font-size:13px}
- .grid{grid-template-columns:1fr}
- section{padding:55px 6%}
- .hero{padding:65px 6%;min-height:70vh}
-}
-@media(prefers-reduced-motion:reduce){
- *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071629">
+  <meta name="description" content="CSB Chemicals — Textile Chemicals, Dyes and Solutions for the Textile Industry.">
+  <title>CSB Chemicals | Textile Chemicals & Dyes</title>
+
+  <style>
+    :root {
+      --navy: #071629;
+      --navy2: #0d2540;
+      --cyan: #45e0dc;
+      --white: #f7fbff;
+      --muted: #a9bacb;
+      --line: rgba(255,255,255,.12);
+      --light: #edf5fa;
+      --ink: #12283d;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--white);
+      background: var(--navy);
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1120px, 88%); margin: auto; }
+
+    /* NAVIGATION */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7,22,41,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      text-decoration: none;
+      font-size: 21px;
+      line-height: 1.15;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+    .brand span { color: var(--cyan); }
+    .brand small {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #b8c7d7;
+      margin-top: 6px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 23px; }
+    .nav-links a {
+      font-size: 13px;
+      color: #e0e9f2;
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-cta {
+      border: 1px solid var(--cyan);
+      padding: 9px 15px;
+      border-radius: 5px;
+    }
+    .menu-btn {
+      display: none;
+      background: transparent;
+      color: white;
+      border: 1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 21px;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse at 85% 20%, #168b9b38, transparent 40%),
+        radial-gradient(ellipse at 70% 90%, #1677bd25, transparent 42%),
+        linear-gradient(120deg, #071629 35%, #0d2947);
+    }
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      right: -100px;
+      top: 110px;
+      border: 1px solid #45e0dc38;
+      border-radius: 50%;
+      box-shadow: 0 0 0 45px #45e0dc08, 0 0 0 90px #45e0dc05;
+      animation: float 8s ease-in-out infinite;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 740px;
+      padding: 85px 0 100px;
+      animation: enter 1s ease both;
+    }
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(43px, 7.5vw, 78px);
+      line-height: 1.04;
+      letter-spacing: -2px;
+      margin: 23px 0;
+    }
+    h1 span { color: var(--cyan); }
+    .hero p {
+      max-width: 570px;
+      color: #c0cedd;
+      font-size: 17px;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 21px;
+      border-radius: 5px;
+      background: var(--cyan);
+      color: #071629;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 13px;
+      border: 1px solid var(--cyan);
+      transition: transform .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-outline { background: transparent; color: white; border-color: #ffffff50; }
+    .hero-note { margin-top: 28px; font-size: 12px; color: #9eb4c9; }
+
+    /* TRUST STRIP */
+    .strip {
+      background: var(--cyan);
+      color: var(--navy);
+      padding: 17px 0;
+    }
+    .strip-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    /* SECTIONS */
+    section { padding: 88px 0; }
+    .light { background: var(--light); color: var(--ink); }
+    .section-head { max-width: 690px; margin-bottom: 38px; }
+    .section-head.center { text-align: center; margin-left: auto; margin-right: auto; }
+    .section-head p { color: #637589; }
+    .light .eyebrow { color: #087f93; }
+    h2 {
+      font-size: clamp(31px, 5vw, 45px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin: 12px 0 15px;
+    }
+
+    /* PRODUCT CARDS */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .product {
+      position: relative;
+      overflow: hidden;
+      padding: 29px 25px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: linear-gradient(145deg, #102a47, #091b30);
+      transition: transform .25s, border-color .25s;
+    }
+    .product:hover { transform: translateY(-6px); border-color: var(--cyan); }
+    .product:after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      right: -65px;
+      bottom: -65px;
+      border: 1px solid #45e0dc30;
+      border-radius: 50%;
+    }
+    .product-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      background: #45e0dc14;
+      color: var(--cyan);
+      border: 1px solid #45e0dc36;
+      font-size: 25px;
+      margin-bottom: 23px;
+    }
+    .product p { color: var(--muted); font-size: 14px; }
+    .text-link {
+      display: inline-block;
+      margin-top: 9px;
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--cyan);
+      font-weight: 800;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+    .about-panel {
+      padding: 35px;
+      border-radius: 12px;
+      color: white;
+      background:
+        radial-gradient(circle at 100% 0%, #45e0dc28, transparent 50%),
+        linear-gradient(145deg, #102d4a, #08192c);
+      border: 1px solid var(--line);
+    }
+    .about-panel .big {
+      color: var(--cyan);
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+    .about-panel p { color: #bdcad8; }
+    .check-list { list-style: none; padding: 0; margin: 22px 0 0; }
+    .check-list li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+    .check-list li:before { content: "✓"; color: var(--cyan); margin-right: 12px; font-weight: bold; }
+
+    /* WHY US */
+    .benefit {
+      background: white;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid #dce7ee;
+    }
+    .benefit h3 { margin-top: 0; }
+    .benefit p { color: #637589; font-size: 14px; }
+
+    /* CONTACT */
+    .contact {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 110%, #168b9b38, transparent 60%),
+        #071629;
+    }
+    .contact .section-head { margin-left: auto; margin-right: auto; }
+    .contact .section-head p { color: #b7c6d5; }
+    .contact-box {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: #ffffff08;
+      border-radius: 10px;
+    }
+    .contact-name { font-size: 20px; font-weight: 800; margin-bottom: 0; }
+    .contact-role { color: var(--cyan); font-size: 13px; }
+    .contact-tip { font-size: 12px; color: #9eb4c9; margin-top: 20px; }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      color: #9eb1c5;
+      font-size: 12px;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+
+    /* REVEAL ANIMATIONS */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s, transform .7s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-18px) rotate(5deg); }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: 90%; }
+      .nav-inner { min-height: 68px; }
+      .menu-btn { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        background: #071629;
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 5px 0; }
+      .hero { min-height: 550px; }
+      .hero-content { padding: 75px 0; }
+      .hero:after { width: 250px; height: 250px; right: -140px; top: 200px; }
+      .hero p { font-size: 15px; }
+      section { padding: 65px 0; }
+      .cards, .about-grid { grid-template-columns: 1fr; gap: 16px; }
+      .about-grid { gap: 28px; }
+      .strip-inner { justify-content: center; text-align: center; }
+      .contact-box { padding: 23px 16px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
 </head>
+
 <body>
-<nav>
-  <div class="logo">CSB CHEMICALS</div>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="CSB Chemicals Home">
+        CSB <span>CHEMICALS</span>
+        <small>TEXTILE CHEMICALS & DYES</small>
+      </a>
 
-<header class="hero" id="home">
-  <div class="hero-content">
-    <div class="tag">TEXTILE CHEMICALS & DYES</div>
-    <h1>Better Chemistry.<br><span>Better Textiles.</span></h1>
-    <p>Solutions for the textile industry, focused on quality,
-    consistency and dependable business relationships.</p>
-    <a class="btn" href="#products">Explore Solutions ↗</a>
-    <a class="btn secondary" href="#contact">Contact Our Team</a>
-  </div>
-</header>
+      <button class="menu-btn" id="menuBtn"
+        aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-<section id="products">
-  <h2 class="section-title">Our Solutions</h2>
-  <p class="intro">Explore our textile chemical and dye categories.
-  Contact our team to confirm product availability and specifications.</p>
-  <div class="grid">
-    <article class="card">
-      <div class="symbol">◈</div>
-      <h3>Textile Dyes</h3>
-      <p>Dye solutions for textile processing. Ask us about suitable
-      shades, applications and available grades.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">✧</div>
-      <h3>Textile Chemicals</h3>
-      <p>Chemical solutions for textile processing requirements,
-      subject to product availability and application.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">⬡</div>
-      <h3>Industrial Solutions</h3>
-      <p>Discuss your process requirements with our team to identify
-      suitable products and technical information.</p>
-    </article>
-  </div>
-</section>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#advantages">Why CSB</a>
+        <a class="nav-cta" href="#contact">Contact Us ↗</a>
+      </div>
+    </div>
+  </nav>
 
-<section class="about" id="about">
-  <h2 class="section-title">About CSB Chemicals</h2>
-  <p class="intro">Your business partner for textile chemicals and dyes.
-  We aim to build lasting customer relationships through responsive
-  service, product guidance and professional communication.</p>
-  <div class="grid">
-    <article class="card">
-      <h3>Quality Focus</h3>
-      <p>Product information and specifications for informed selection.</p>
-    </article>
-    <article class="card">
-      <h3>Customer Support</h3>
-      <p>Helping customers discuss their textile processing needs.</p>
-    </article>
-    <article class="card">
-      <h3>Business Partnership</h3>
-      <p>Building long-term relationships with textile businesses.</p>
-    </article>
-  </div>
-</section>
+  <main>
+    <header class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Textile Chemistry · Industrial Solutions</div>
+          <h1>Precision in Chemistry.<br><span>Excellence in Textiles.</span></h1>
+          <p>
+            Your business partner for textile chemicals and dyes.
+            Explore product solutions and connect with our team
+            to discuss your processing requirements.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#products">Explore Our Products ↗</a>
+            <a class="btn btn-outline" href="#contact">Talk to Our Team</a>
+          </div>
+          <div class="hero-note">
+            TEXTILE DYES &nbsp; · &nbsp; PROCESSING CHEMICALS &nbsp; · &nbsp; CUSTOMER SUPPORT
+          </div>
+        </div>
+      </div>
+    </header>
 
-<section class="contact" id="contact">
-  <div class="tag">LET'S CONNECT</div>
-  <h2 class="section-title">Discuss Your Requirements</h2>
-  <p>Contact CSB Chemicals for product inquiries and business information.</p>
-  <p><strong>Sales Executive: Ali Raza</strong></p>
-  <a class="btn" href="mailto:YOUR-EMAIL@example.com?subject=CSB%20Chemicals%20Inquiry">
-    Email Our Team
-  </a>
-  <p style="font-size:13px">Replace the sample email with your actual business email.</p>
-</section>
+    <div class="strip">
+      <div class="container strip-inner">
+        <span>01 — TEXTILE DYES</span>
+        <span>02 — PROCESSING CHEMICALS</span>
+        <span>03 — BUSINESS PARTNERSHIPS</span>
+      </div>
+    </div>
 
-<footer>
-  © <span id="year"></span> CSB Chemicals · Textile Chemicals & Dyes
-</footer>
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
+    <section id="products">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Our Product Categories</div>
+          <h2>Solutions for Textile Industry</h2>
+          <p>
+            Explore our key product categories. Contact CSB Chemicals
+            for current availability, technical specifications and suitable applications.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="product reveal">
+            <div class="product-icon">◈</div>
+            <h3>Textile Dyes</h3>
+            <p>
+              Dye categories for textile applications. Discuss shade,
+              fabric and processing requirements with our team.
+            </p>
+            <a class="text-link" href="#contact">Product Inquiry ↗</a>
+          </article>
+
+          <article class="product reveal">
+            <div class="product-icon">✧</div>
+            <h3>Textile Processing Chemicals</h3>
+            <p>
+              Chemical solutions for textile processing needs,
+              subject to the application and available product range.
+            </p>
+            <a class="text-link" href="#contact">Product Inquiry ↗</a>
+          </article>
+
+          <article class="product reveal">
+            <div class="product-icon">⬡</div>
+            <h3>Auxiliaries & Solutions</h3>
+            <p>
+              Discuss your production requirements to identify
+              potentially suitable auxiliaries and related products.
+            </p>
+            <a class="text-link" href="#contact">Product Inquiry ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <div class="eyebrow">About CSB Chemicals</div>
+          <h2>Building Better Business Through Chemistry</h2>
+          <p>
+            CSB Chemicals focuses on textile chemicals and dyes,
+            with an emphasis on professional communication,
+            understanding customer needs and supporting product selection.
+          </p>
+          <p>
+            We welcome inquiries from textile businesses seeking
+            product information and potential supply partnerships.
+          </p>
+          <a class="btn" href="#contact">Connect With Us ↗</a>
+        </div>
+
+        <div class="about-panel reveal">
+          <div class="eyebrow">Our Approach</div>
+          <div class="big">Quality.<br>Service.<br>Partnership.</div>
+          <p>
+            Understanding requirements and communicating clearly
+            are at the heart of a strong business relationship.
+          </p>
+          <ul class="check-list">
+            <li>Customer-focused communication</li>
+            <li>Product information on request</li>
+            <li>Professional business relationships</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Why Work With Us</div>
+          <h2>A Professional Approach</h2>
+          <p>Clear communication and a practical approach to business inquiries.</p>
+        </div>
+
+        <div class="cards">
+          <article class="benefit reveal">
+            <h3>Product Guidance</h3>
+            <p>Share your requirements and ask our team about product details and applications.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3>Responsive Communication</h3>
+            <p>Discuss your inquiry and the next steps directly with our sales representative.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3>Business Partnerships</h3>
+            <p>Connect with us to explore potential textile industry supply relationships.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Let's Start a Conversation</div>
+          <h2>Discuss Your Requirements</h2>
+          <p>
+            Need product information or want to discuss a business inquiry?
+            Contact our sales team.
+          </p>
+        </div>
+
+        <div class="contact-box reveal">
+          <div class="eyebrow">Sales Contact</div>
+          <p class="contact-name">Ali Raza</p>
+          <div class="contact-role">Sales Executive · CSB Chemicals</div>
+
+          <!-- Replace the example email and phone before publishing. -->
+          <div class="actions" style="justify-content:center">
+            <a class="btn" href="mailto:YOUR-EMAIL@example.com?subject=CSB%20Chemicals%20Inquiry">
+              Email Us ↗
+            </a>
+            <a class="btn btn-outline" href="#products">
+              View Products
+            </a>
+          </div>
+
+          <p class="contact-tip">
+            Update the sample email with your real business email.
+            Add your WhatsApp number when ready.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> CSB Chemicals. All rights reserved.</div>
+      <div>Textile Chemicals & Dyes</div>
+      <a href="#home">Back to Top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach(function (element) {
+        observer.observe(element);
+      });
+    } else {
+      document.querySelectorAll(".reveal").forEach(function (element) {
+        element.classList.add("visible");
+      });
+    }
+  </script>
 </body>
-  </html>
-    
+</html>
